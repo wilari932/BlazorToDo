@@ -5,7 +5,7 @@ namespace BlazorAppz.Services
     public class HttpClientWrapperService
     {
 
-        private readonly string _baseUrl = "https://localhost:7102";
+        private readonly string _baseUrl = "https://localhost:7178";
 
         public HttpClient _httpClient;
 
