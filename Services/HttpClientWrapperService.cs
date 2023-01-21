@@ -5,7 +5,7 @@ namespace BlazorAppz.Services
     public class HttpClientWrapperService
     {
 
-        private readonly string _baseUrl = "http://localhost:7102/api/";
+        private readonly string _baseUrl = "https://localhost:7102";
 
         public HttpClient _httpClient;
 
@@ -19,8 +19,11 @@ namespace BlazorAppz.Services
             var response = await _httpClient.GetAsync(_baseUrl+url);
             response.EnsureSuccessStatusCode();
 
+
             using var responseContent = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<T>(responseContent);
+           return await JsonSerializer.DeserializeAsync<T>(responseContent);
+            
+
         }
 
         //public async Task<T> PutAsync<T>(string url)

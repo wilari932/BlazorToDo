@@ -24,7 +24,7 @@ namespace BlazorAppz
 
             builder.Services.AddHttpClient<HttpClientWrapperService>(client =>
             {
-                client.BaseAddress = new Uri("https://localhost:7102/");
+                client.BaseAddress = new Uri("https://localhost:7102");
             });
 
             var app = builder.Build();

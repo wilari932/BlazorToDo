@@ -15,7 +15,7 @@ namespace BlazorAppz.Services
 
         public async Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync()
         {
-            var path = "List/GetCurrentUserLists";
+            var path = "/GetCurrentUserLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
 
             return result;
@@ -33,7 +33,7 @@ namespace BlazorAppz.Services
 
         public async Task<IEnumerable<CreateToDoList>> GetAllListsAsync()
         {
-            var path = "List/GetAllLists";
+            var path = "/GetAllLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
             return result;
 
