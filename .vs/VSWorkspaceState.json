@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Pages",
     "\\Services"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\Pages\\GetList.razor",
   "PreviewInSolutionExplorer": false
 }

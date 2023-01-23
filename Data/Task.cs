@@ -1,16 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace BlazorAppz.Data
 {
     public class Task
     {
-        [Key]
+        [JsonPropertyName("id")]
         public Guid Id { get; set; }
+        [JsonPropertyName("taskTitle")]
         public string TaskTitle { get; set; }
+        [JsonPropertyName("completed")]
         public bool Completed { get; set; }
 
-        [ForeignKey("CreateToDoListId")]
+        [JsonPropertyName("createToDoListId")]
         public Guid CreateToDoListId { get; set; }
 
     }

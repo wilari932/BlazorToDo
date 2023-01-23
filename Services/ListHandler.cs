@@ -33,7 +33,7 @@ namespace BlazorAppz.Services
 
         public async Task<IEnumerable<CreateToDoList>> GetAllListsAsync()
         {
-            var path = "/GetAllLists";
+            var path = $"List/GetAllLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
             return result;
 

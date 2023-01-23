@@ -20,11 +20,15 @@ namespace BlazorAppz
             builder.Services.AddSingleton<HttpClientWrapperService>();
 
             builder.Services.AddSingleton<IListHandler, ListHandler>();
+            builder.Services.AddSingleton<UserHandler>();
+            builder.Services.AddScoped<UserHandler>();
+
+            builder.Services.AddScoped<IUserHandler, UserHandler>();
 
 
             builder.Services.AddHttpClient<HttpClientWrapperService>(client =>
             {
-                client.BaseAddress = new Uri("https://localhost:7102");
+                client.BaseAddress = new Uri("https://localhost:7178");
             });
 
             var app = builder.Build();

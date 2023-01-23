@@ -1,0 +1,28 @@
+﻿@page "/SignUp"
+@using Services;
+@using Data;
+@inject UserHandler userhandler;
+
+
+<h3>CreateUser</h3>
+
+
+<EditForm Model="@user" OnSubmit="@HandleSubmit">
+    <InputText id="name" @bind-Value="user.FirstName" />
+    <InputText id="name" @bind-Value="user.LastName" />
+    <InputText id="name" @bind-Value="user.UserName" />
+    <InputText id="name" @bind-Value="user.Password" />
+    <InputText id="name" @bind-Value="user.Email" />
+    <button type="submit">Submit</button>
+</EditForm>
+
+
+@code {
+
+    private CreateUser user = new CreateUser();
+
+    public async System.Threading.Tasks.Task HandleSubmit()
+    {
+        //user = await userhandler.CreateUser();
+    }
+}
