@@ -17,24 +17,17 @@ namespace BlazorAppz
             _httpClientWrapper = client;
         }
 
-        //public CreateUser CreateUser(string FirstName, string LastName, string UserName, string Email, string Password)
-        //{
-        //    var user = new CreateUser()
-        //    {
-        //        Id = Guid.NewGuid(),
-        //        FirstName = FirstName,
-        //        LastName = LastName,
-        //        UserName = UserName,
-        //        Email = Email,
-        //        Password = Password,
-        //        Access = Access.User,
-        //        ToDoList = new List<CreateToDoList>()
-        //    };
 
-        //    _dbContext.Add(user);
-        //    _dbContext.SaveChanges();
-        //    return user;
-        //}
+
+        public async Task<CreateUser> CreateUser(CreateUser user)
+        {
+            user.Access = Access.User;
+            user.Id = Guid.NewGuid();
+            var path = $"User/CreateUser";
+            var stringContent = JsonSerializer.Serialize(user);
+            var data = new StringContent(stringContent, Encoding.UTF8, "application/json");
+            return await _httpClientWrapper.PostAsync<CreateUser>(path, data);
+        }
 
 
         //public void DeleteUser(Guid? id)
@@ -75,16 +68,10 @@ namespace BlazorAppz
 
         public async Task<CreateUser> Authenticate(CreateUser user)
         {
-
             var path = $"User/LogIn";
-            //var result = await _httpClientWrapper.Get<CreateUser>(path);
-            //return result;
             var stringContent = JsonSerializer.Serialize(user);
             var data = new StringContent(stringContent, Encoding.UTF8, "application/json");
             return await _httpClientWrapper.PostAsync<CreateUser>(path, data);
-
-            //var user = _dbContext.User.SingleOrDefault(x => x.UserName == username && x.Password == password);
-            //return user;
         }
 
         //public CreateUser ChangeAccess(Guid id, Access access)

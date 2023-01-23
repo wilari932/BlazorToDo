@@ -42,7 +42,10 @@ namespace BlazorAppz.Services
             response.EnsureSuccessStatusCode();
             using var responseContent = await response.Content.ReadAsStreamAsync();
             return await JsonSerializer.DeserializeAsync<T>(responseContent);
+
+
         }
+
 
 
         //public async Task<T> PostAsync<T>(string url, HttpContent content)

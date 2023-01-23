@@ -8,11 +8,11 @@
 
 
 <EditForm Model="@user" OnSubmit="@HandleSubmit">
-    <InputText id="name" @bind-Value="user.FirstName" />
-    <InputText id="name" @bind-Value="user.LastName" />
-    <InputText id="name" @bind-Value="user.UserName" />
-    <InputText id="name" @bind-Value="user.Password" />
-    <InputText id="name" @bind-Value="user.Email" />
+    <InputText id="name" @bind-Value="user.FirstName" /><br />
+    <InputText id="name" @bind-Value="user.LastName" /><br />
+    <InputText id="name" @bind-Value="user.UserName" /><br />
+    <InputText id="name" @bind-Value="user.Password" /><br/>
+    <InputText id="name" @bind-Value="user.Email" /><br />
     <button type="submit">Submit</button>
 </EditForm>
 
@@ -23,6 +23,6 @@
 
     public async System.Threading.Tasks.Task HandleSubmit()
     {
-        //user = await userhandler.CreateUser();
+        user = await userhandler.CreateUser(user);
     }
 }

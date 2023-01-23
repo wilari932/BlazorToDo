@@ -4,7 +4,7 @@ namespace BlazorAppz
 {
     public interface IUserHandler
     {
-        //CreateUser CreateUser(string FirstName, string LastName, string UserName, string Email, string Password);
+        Task<CreateUser> CreateUser(CreateUser user);
         //void DeleteUser(Guid? id);
         //CreateUser GetOneUser(Guid id);
         Task<IEnumerable<CreateUser>> GetAllUsersAsync();

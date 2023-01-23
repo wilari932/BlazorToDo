@@ -4,6 +4,6 @@
     "\\Pages",
     "\\Services"
   ],
-  "SelectedNode": "\\Pages\\GetList.razor",
+  "SelectedNode": "\\Services\\HttpClientWrapperService.cs",
   "PreviewInSolutionExplorer": false
 }
