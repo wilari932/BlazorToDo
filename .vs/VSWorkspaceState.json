@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Data",
     "\\Pages",
-    "\\Services"
+    "\\Services",
+    "\\Shared"
   ],
-  "SelectedNode": "\\Services\\HttpClientWrapperService.cs",
+  "SelectedNode": "\\Pages\\EditProfile.razor",
   "PreviewInSolutionExplorer": false
 }

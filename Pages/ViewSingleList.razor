@@ -1,0 +1,60 @@
+﻿@page "/ViewSingleList"
+@using Services;
+@using Data;
+@inject ListHandler listHandler;
+@inject NavigationManager manager;
+
+
+<div class="list-group">
+    @foreach (var list in lists)
+    {
+        @list.ListTitle;
+    }
+
+</div>
+
+<h1><button @onclick="GetRecent">OK</button></h1>
+
+
+@code {
+
+
+
+    private IEnumerable<CreateToDoList> lists = new List<CreateToDoList>();
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        lists = await listHandler.GetAllListsAsync();
+    }
+
+
+    public Guid listId = Guid.NewGuid();
+
+    public async System.Threading.Tasks.Task GetRecent()
+    {
+        listId = await listHandler.GetRecentViewedList();
+        ViewList(listId);
+    }
+
+
+    public async System.Threading.Tasks.Task ViewList(Guid listId)
+    {
+        //listId = await listHandler.GetRecentViewedList();
+        //listId = await listHandler.GetRecentViewedList();
+        //theList = await listHandler.ShowList(listId);
+
+        manager.NavigateTo($"/ShowList/{listId.ToString()}");    ///Jävla guid ska med {listId}
+
+    }
+
+
+
+
+
+    //protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    //{
+    //    theList = await listHandler.ShowList(listId);
+    //    listId = await listHandler.GetRecentViewedList();
+    //    ViewList(listId);
+    //}
+}

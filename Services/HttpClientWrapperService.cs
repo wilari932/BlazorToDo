@@ -27,14 +27,13 @@ namespace BlazorAppz.Services
 
         }
 
-        //public async Task<T> PutAsync<T>(string url)
-        //{
-        //    var response = await _httpClient.PutAsync(url);
-        //    response.EnsureSuccessStatusCode();
-
-        //    using var responseContent = await response.Content.ReadAsStreamAsync();
-        //    return await JsonSerializer.DeserializeAsync<T>(responseContent);
-        //}
+        public async Task<T> PutAsync<T>(string url, HttpContent content)
+        {
+            var response = await _httpClient.PutAsync(_baseUrl+url, content);
+            response.EnsureSuccessStatusCode();
+            using var responseContent = await response.Content.ReadAsStreamAsync();
+            return await JsonSerializer.DeserializeAsync<T>(responseContent);
+        }
 
         public async Task<T> PostAsync<T>(string url, HttpContent content)
         {
@@ -47,28 +46,29 @@ namespace BlazorAppz.Services
         }
 
 
+        //var request = new HttpRequestMessage(HttpMethod.Delete, "http://www.example.com/");
+        //request.Content = new StringContent(JsonConvert.SerializeObject(object), Encoding.UTF8, "application/json");
+        //await this.client.SendAsync(request);
 
-        //public async Task<T> PostAsync<T>(string url, HttpContent content)
+
+        //public async Task<T> DeleteAsync<T>(string url, CancellationToken token)
         //{
-        //    var response = await _httpClient.PostAsync(_baseUrl + url, content);
+        //    var response = await _httpClient.DeleteAsync(_baseUrl + url, token);
         //    response.EnsureSuccessStatusCode();
+
         //    using var responseContent = await response.Content.ReadAsStreamAsync();
         //    return await JsonSerializer.DeserializeAsync<T>(responseContent);
         //}
 
 
+        //public async Task<T> SendAsync<T>(string url, CancellationToken content)
+        //{
+        //    var response = await _httpClient.DeleteAsync(_baseUrl + url, content);
+        //    response.EnsureSuccessStatusCode();
 
-
-        public async Task<T> DeleteAsync<T>(string url)
-        {
-            var response = await _httpClient.DeleteAsync(_baseUrl + url);
-            response.EnsureSuccessStatusCode();
-
-            using var responseContent = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<T>(responseContent);
-        }
-
-
+        //    using var responseContent = await response.Content.ReadAsStreamAsync();
+        //    return await JsonSerializer.DeserializeAsync<T>(responseContent);
+        //}
 
 
     }

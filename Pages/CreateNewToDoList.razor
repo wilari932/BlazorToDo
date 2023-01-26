@@ -1,25 +1,50 @@
 ﻿@page "/CreateNewToDoList";
 @using Services;
+@using Data;
+@inject ListHandler listhandler;
 
 
-<h3 style="text-blue">Create new list</h3>
 
-@*<EditForm>
+<h3 style="text-blue">Create new list</h3><br />
+<h3>Title of list</h3><br />
+<EditForm Model="@newList">
+    <InputText id="name" @bind-Value="newList.ListTitle" /> <br /> 
+</EditForm>
 
+@*<EditForm Model="@listTasks" OnSubmit="@AddToDo">
+    <InputText id="name" @bind-Value="addTask.TaskTitle" /> <br />
+    <button type="submit">Add to do</button>
 </EditForm>*@
+
+<button @onclick="HandleSubmit">Save</button>
+
 
 @code {
 
-    //private HttpContent listItem;
-    
-    //public CreateNewToDoList(HttpContent listItem)
+    public CreateToDoList newList = new CreateToDoList();
+
+    //public ICollection<BlazorAppz.Data.Task> listTasks = new List<BlazorAppz.Data.Task>();
+
+    //public Data.Task addTask = new Data.Task();
+
+
+
+    //public void AddToDo()
     //{
-    //    this.listItem = listItem;
+    //    addTask.CreateToDoListId = newList.Id;
+    //    addTask.Id = Guid.NewGuid();
+    //    listTasks.Add(addTask);
+    //    newList.Task = listTasks;
     //}
 
-    //public async Task OnSubmit()
+    //public void AddListTitle()
     //{
-
-    //    await ListHandler.CreateNewToDoList(listItem);
+    //    newList.ListTitle;
     //}
+
+    public async System.Threading.Tasks.Task HandleSubmit()
+    {
+
+        newList = await listhandler.CreateNewToDoList(newList);
+    }
 }

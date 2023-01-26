@@ -1,0 +1,30 @@
+﻿@page "/editprofile"
+@using Services;
+@using Data;
+@inject UserHandler userhandler;
+
+
+
+
+<h3>Edit profile </h3>
+
+<EditForm Model="@user" OnSubmit="@HandleSubmit">
+    <InputText id="name" @bind-Value="user.FirstName" /> <br />
+    <InputText id="name" @bind-Value="user.LastName" /><br />
+    <InputText id="name" @bind-Value="user.UserName" /><br />
+    <InputText id="name" @bind-Value="user.Email" /><br />
+    <InputText id="name" @bind-Value="user.Password" /><br />
+    <button type="submit">Submit</button> 
+</EditForm>
+
+
+
+@code {
+
+    private CreateUser user = new CreateUser();
+
+    public async System.Threading.Tasks.Task HandleSubmit()
+    {
+        user = await userhandler.EditProfile(user);
+    }
+}

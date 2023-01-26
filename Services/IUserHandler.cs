@@ -1,17 +1,17 @@
 ﻿using BlazorAppz.Data;
 
-namespace BlazorAppz
+namespace BlazorAppz.Services
 {
     public interface IUserHandler
     {
         Task<CreateUser> CreateUser(CreateUser user);
-        //void DeleteUser(Guid? id);
-        //CreateUser GetOneUser(Guid id);
+        //Task<CreateUser> DeleteUser(CreateUser user);
+
         Task<IEnumerable<CreateUser>> GetAllUsersAsync();
 
         //CreateUser ChangeAccess(Guid id, Access access);
 
-        //CreateUser EditProfile(Guid id, string? firstName, string? lastName, string? email, string? password);
+        Task<CreateUser> EditProfile(CreateUser user);
 
         Task<CreateUser> Authenticate(CreateUser user);
     }

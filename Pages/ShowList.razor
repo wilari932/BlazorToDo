@@ -1,0 +1,47 @@
+﻿@page "/ShowList/{listId}"; 
+@using Services;
+@using Data;
+@inject ListHandler listHandler;
+@inject NavigationManager manager;
+
+
+<h1>@theList.ListTitle</h1>
+
+
+
+
+@code {
+
+    public CreateToDoList theList = new ();
+
+    [Parameter]
+    public string listId { get; set; }
+
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        Guid listID = Guid.Parse(listId);
+
+        theList = await listHandler.ShowList(listID);
+    }
+
+    //public void Display()
+    //{
+    //    ViewList(listId);
+    //}
+
+    //public async System.Threading.Tasks.Task ViewList(Guid listId)
+    //{
+    //    listId = await listHandler.GetRecentViewedList();
+    //    theList = await listHandler.ShowList(listId);
+
+    //}
+
+    //protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    //{
+    //    theList = await listHandler.ShowList(listId);
+    //    listId = await listHandler.GetRecentViewedList();
+    //    ViewList(listId);
+    //}
+}
+}
