@@ -7,6 +7,15 @@
 
 <h1>@theList.ListTitle</h1>
 
+<div class="list-group">
+    @foreach (var task in theList.Task)
+    {
+        <p>@task.TaskTitle</p><br />
+
+    }
+
+</div>
+
 
 
 
@@ -25,23 +34,5 @@
         theList = await listHandler.ShowList(listID);
     }
 
-    //public void Display()
-    //{
-    //    ViewList(listId);
-    //}
 
-    //public async System.Threading.Tasks.Task ViewList(Guid listId)
-    //{
-    //    listId = await listHandler.GetRecentViewedList();
-    //    theList = await listHandler.ShowList(listId);
-
-    //}
-
-    //protected override async System.Threading.Tasks.Task OnInitializedAsync()
-    //{
-    //    theList = await listHandler.ShowList(listId);
-    //    listId = await listHandler.GetRecentViewedList();
-    //    ViewList(listId);
-    //}
-}
 }

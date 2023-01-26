@@ -13,7 +13,6 @@ namespace BlazorAppz.Services
         //CreateToDoList ChangeListName(string value);
         Task<CreateToDoList> ShowList(Guid id);
         //CreateToDoList WeeklyList(Guid? id);
-        //IEnumerable<CreateToDoList> SortLists(Sort option, string id);
         Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync();
     }
 }

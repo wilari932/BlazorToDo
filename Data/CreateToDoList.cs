@@ -6,6 +6,7 @@ namespace BlazorAppz.Data
 {
     public class CreateToDoList
     {
+        [JsonPropertyName("id")]
         public Guid Id { get; set; }
         [ForeignKey("CreateUserId")]
         [JsonPropertyName("createUserId")]
@@ -13,7 +14,7 @@ namespace BlazorAppz.Data
 
         [JsonPropertyName("listTitle")]
         public string ListTitle { get; set; }
-        [JsonPropertyName("¨task")]
+        [JsonPropertyName("task")]
         public ICollection<Task> Task { get; set; }
         [JsonPropertyName("date")]
         public string Date { get; set; }
