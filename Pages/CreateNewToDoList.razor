@@ -5,8 +5,7 @@
 
 
 
-<h3 style="text-blue">Create new list</h3><br />
-<h3>Title of list</h3><br />
+<h3 style="text-blue">Skapa ny lista</h3><br />
 <EditForm Model="@newList">
     <InputText id="name" @bind-Value="newList.ListTitle" /> <br /> 
 </EditForm>
@@ -22,25 +21,6 @@
 @code {
 
     public CreateToDoList newList = new CreateToDoList();
-
-    //public ICollection<BlazorAppz.Data.Task> listTasks = new List<BlazorAppz.Data.Task>();
-
-    //public Data.Task addTask = new Data.Task();
-
-
-
-    //public void AddToDo()
-    //{
-    //    addTask.CreateToDoListId = newList.Id;
-    //    addTask.Id = Guid.NewGuid();
-    //    listTasks.Add(addTask);
-    //    newList.Task = listTasks;
-    //}
-
-    //public void AddListTitle()
-    //{
-    //    newList.ListTitle;
-    //}
 
     public async System.Threading.Tasks.Task HandleSubmit()
     {

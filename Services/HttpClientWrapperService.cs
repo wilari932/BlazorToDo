@@ -45,12 +45,6 @@ namespace BlazorAppz.Services
 
         }
 
-
-        //var request = new HttpRequestMessage(HttpMethod.Delete, "http://www.example.com/");
-        //request.Content = new StringContent(JsonConvert.SerializeObject(object), Encoding.UTF8, "application/json");
-        //await this.client.SendAsync(request);
-
-
         //public async Task<T> DeleteAsync<T>(string url, CancellationToken token)
         //{
         //    var response = await _httpClient.DeleteAsync(_baseUrl + url, token);
