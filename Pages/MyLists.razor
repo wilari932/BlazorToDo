@@ -1,4 +1,4 @@
-﻿@page "/ViewSingleList"
+﻿@page "/MyLists"
 @using Services;
 @using Data;
 @inject ListHandler listHandler;
@@ -6,13 +6,14 @@
 
 
 <div class="list-group">
-    <h1>Lists</h1>
+    <h1>Mina listor</h1>
+    
     @foreach (var list in lists)
-    {
-
-        <button @onclick="@(async () => await GetList(list))" class="btn-p">@list.ListTitle</button><br /><br />
+    {  <li>
+        <button @onclick="@(async () => await GetList(list))" class="btn-medium">@list.ListTitle</button><br /> 
+        </li>
     }
-
+    
 </div>
 
 @code {
@@ -27,7 +28,7 @@
 
     protected override async System.Threading.Tasks.Task OnInitializedAsync()
     {
-        lists = await listHandler.GetAllListsAsync();  //Hämta ut sina egna listor här
+        lists = await listHandler.GetCurrentUserListsAsync();
     }
 
 

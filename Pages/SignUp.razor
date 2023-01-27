@@ -8,10 +8,17 @@
 
 
 <EditForm Model="@user" OnSubmit="@HandleSubmit">
+    <DataAnnotationsValidator />
+    <p>Förnamn</p>
     <InputText id="name" @bind-Value="user.FirstName" /><br />
+    <p>Efternamn</p>
     <InputText id="name" @bind-Value="user.LastName" /><br />
+    <p>Username</p>
     <InputText id="name" @bind-Value="user.UserName" /><br />
+    <ValidationMessage For="@(() => user.UserName)" />
+    <P>Lösenord</P>
     <InputText id="name" @bind-Value="user.Password" /><br/>
+    <p>Email</p>
     <InputText id="name" @bind-Value="user.Email" /><br />
     <button type="submit">Submit</button>
 </EditForm>

@@ -13,6 +13,7 @@ namespace BlazorAppz.Data
         public Guid CreateUserId { get; set; }
 
         [JsonPropertyName("listTitle")]
+        [Required]
         public string ListTitle { get; set; }
         [JsonPropertyName("task")]
         public ICollection<Task> Task { get; set; }

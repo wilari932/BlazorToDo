@@ -10,7 +10,7 @@ namespace BlazorAppz.Services
         Task <Guid> GetRecentViewedList();
         Task<IEnumerable<CreateToDoList>> GetAllListsAsync();
         //void DeleteList(Guid? id);
-        //CreateToDoList ChangeListName(string value);
+        Task<CreateToDoList> EditList(CreateToDoList list);
         Task<CreateToDoList> ShowList(Guid id);
         //CreateToDoList WeeklyList(Guid? id);
         Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync();

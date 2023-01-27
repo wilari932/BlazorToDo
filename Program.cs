@@ -22,8 +22,10 @@ namespace BlazorAppz
             builder.Services.AddSingleton<IListHandler, ListHandler>();
             builder.Services.AddSingleton<UserHandler>();
             builder.Services.AddScoped<UserHandler>();
-
+            builder.Services.AddScoped<ITaskHandler, TaskHandler>();
             builder.Services.AddScoped<IUserHandler, UserHandler>();
+
+            builder.Services.AddSingleton<TaskHandler>();
 
 
             builder.Services.AddHttpClient<HttpClientWrapperService>(client =>

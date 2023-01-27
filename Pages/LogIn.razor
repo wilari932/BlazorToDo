@@ -2,6 +2,7 @@
 @using Services;
 @using Data;
 @inject UserHandler userhandler;
+@inject NavigationManager manager;
 
 
 
@@ -23,5 +24,6 @@
     public async System.Threading.Tasks.Task HandleSubmit()
     {
         user = await userhandler.Authenticate(user); 
+        manager.NavigateTo($"/MyLists");
     }
 }

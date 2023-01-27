@@ -17,7 +17,7 @@ namespace BlazorAppz.Services
 
         public async Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync()  //Funkar
         {
-            var path = "/GetCurrentUserLists";
+            var path = "List/GetCurrentUsersLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
 
             return result;
@@ -73,16 +73,16 @@ namespace BlazorAppz.Services
         //    }
         //}
 
-        //public CreateToDoList ChangeListName(string listTitle)
-        //{
-        //    var listID = Guid.Parse(ListDictionary.id["ListId"]);
-        //    var list = _dbContext.ToDoLists.FirstOrDefault(x => x.Id == listID);
-        //    list.ListTitle = listTitle;            
-        //    _dbContext.SaveChanges();
-        //    return list;
-        //}
+        public async Task<CreateToDoList> EditList(CreateToDoList list)
+        {
+            var path = $"List/EditList";
+            var stringContent = JsonSerializer.Serialize(list);
+            var data = new StringContent(stringContent, Encoding.UTF8, "application/json");
+            var result = await _httpClientWrapper.PutAsync<CreateToDoList>(path, data);
+            return result;
+        }
 
-        public async Task<CreateToDoList> ShowList(Guid id)
+        public async Task<CreateToDoList> ShowList(Guid id)   //Funkar
         {
             var path = $"List/ShowList/"+id.ToString();
             var result = await _httpClientWrapper.Get<CreateToDoList>(path);

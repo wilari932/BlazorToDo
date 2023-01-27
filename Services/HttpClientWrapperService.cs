@@ -45,14 +45,13 @@ namespace BlazorAppz.Services
 
         }
 
-        //public async Task<T> DeleteAsync<T>(string url, CancellationToken token)
-        //{
-        //    var response = await _httpClient.DeleteAsync(_baseUrl + url, token);
-        //    response.EnsureSuccessStatusCode();
-
-        //    using var responseContent = await response.Content.ReadAsStreamAsync();
-        //    return await JsonSerializer.DeserializeAsync<T>(responseContent);
-        //}
+        public async Task<T> DeleteAsync<T>(string url)
+        {
+            var response = await _httpClient.DeleteAsync(_baseUrl + url);
+            response.EnsureSuccessStatusCode();
+            using var responseContent = await response.Content.ReadAsStreamAsync();
+            return await JsonSerializer.DeserializeAsync<T>(responseContent);
+        }
 
 
         //public async Task<T> SendAsync<T>(string url, CancellationToken content)
