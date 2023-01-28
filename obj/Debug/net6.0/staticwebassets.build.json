@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MsDMw7rtxVvJCdMG+d4ky8YR89O6kOdbTdIvBUbldPI=",
+  "Hash": "O5E3sjDJhgrbYGgFqe/1iDHp6DDi+aEYHAi+vUg+SlY=",
   "Source": "BlazorAppz",
   "BasePath": "_content/BlazorAppz",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlazorAppz\\wwwroot",
       "Source": "BlazorAppz",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorAppz.styles.css",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorAppz.styles.css",
       "SourceId": "BlazorAppz",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "BlazorAppz.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorAppz.styles.css"
+      "OriginalItemSpec": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorAppz.styles.css"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorAppz.bundle.scp.css",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorAppz.bundle.scp.css",
       "SourceId": "BlazorAppz",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "BlazorAppz.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorAppz.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorAppz.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\css\\site.css",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\favicon.ico",
       "SourceId": "BlazorAppz",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elinr\\source\\repos\\BlazorAppz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\WilmarArias\\Documents\\Ellin\\BlazorToDo\\wwwroot\\",
       "BasePath": "_content/BlazorAppz",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
