@@ -18,6 +18,39 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
+
+.btn-medium {
+    color: #170f8a;
+    background-color: #ffffff;
+    border: none;
+    border-color: none;
+}
+
+.taskTitle {   
+    color: #170f8a;
+    background-color: #ffffff;
+    border: none;
+    border-color: none;
+}
+
+.btn-small {
+    color: #ffffff;
+    background-color: #15167c;
+    border: none;
+    border-color: none;
+    border-radius:60px;
+    font-size: 14px;
+    width: 110px;
+    height: 30px;
+    margin-top:20px;
+}
+
+
+.list-group{
+    width: 100%;
+    height: 100%;
+}
+
 .content {
     padding-top: 1.1rem;
 }

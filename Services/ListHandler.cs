@@ -1,5 +1,7 @@
 ﻿using BlazorAppz.Data;
-
+using System.Net;
+using System.Text;
+using System.Text.Json;
 using Task = BlazorAppz.Data.Task;
 
 namespace BlazorAppz.Services
@@ -13,27 +15,40 @@ namespace BlazorAppz.Services
             _httpClientWrapper = client;
         }
 
-        public async Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync()
+        public async Task<IEnumerable<CreateToDoList>> GetCurrentUserListsAsync()  //Funkar
         {
-            var path = "List/GetCurrentUserLists";
+            var path = "List/GetCurrentUsersLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
 
             return result;
         }
 
 
-        //public async Task<CreateToDoList> CreateNewToDoList(HttpContent listItem)
-        //{
-        //    var path = "List/CreateNewList";
-        //    var result = await _httpClientWrapper.PostAsync<CreateToDoList>(path, listItem);
-
-        //    return result;
-
-        //}
-
-        public async Task<IEnumerable<CreateToDoList>> GetAllListsAsync()
+        public async Task<CreateToDoList> CreateNewToDoList(CreateToDoList list)   //funkar
         {
-            var path = "List/GetAllLists";
+            list.ThisWeek = false;
+            list.Expired = false;
+            list.Date = DateTime.Now.ToString("G");
+            list.Id= Guid.NewGuid();
+
+            list.Task = new List<Task>();
+            var path = $"List/CreateNewToDoList";
+            var stringContent = JsonSerializer.Serialize(list);
+            var data = new StringContent(stringContent, Encoding.UTF8, "application/json");
+            return await _httpClientWrapper.PostAsync<CreateToDoList>(path, data);
+
+        }
+
+        public async Task<Guid> GetRecentViewedList()  //funakr
+        {
+            var path = $"List/ViewSingleList";
+            return await _httpClientWrapper.Get<Guid>(path);
+
+        }
+
+        public async Task<IEnumerable<CreateToDoList>> GetAllListsAsync()   //Funkar
+        {
+            var path = $"List/GetAllLists";
             var result = await _httpClientWrapper.Get<IEnumerable<CreateToDoList>>(path);
             return result;
 
@@ -58,60 +73,33 @@ namespace BlazorAppz.Services
         //    }
         //}
 
-        //public CreateToDoList ChangeListName(string listTitle)
-        //{
-        //    var listID = Guid.Parse(ListDictionary.id["ListId"]);
-        //    var list = _dbContext.ToDoLists.FirstOrDefault(x => x.Id == listID);
-        //    list.ListTitle = listTitle;            
-        //    _dbContext.SaveChanges();
-        //    return list;
-        //}
+        public async Task<CreateToDoList> EditList(CreateToDoList list)
+        {
+            var path = $"List/EditList";
+            var stringContent = JsonSerializer.Serialize(list);
+            var data = new StringContent(stringContent, Encoding.UTF8, "application/json");
+            var result = await _httpClientWrapper.PutAsync<CreateToDoList>(path, data);
+            return result;
+        }
 
+        public async Task<CreateToDoList> ShowList(Guid id)   //Funkar
+        {
+            var path = $"List/ShowList/"+id.ToString();
+            var result = await _httpClientWrapper.Get<CreateToDoList>(path);
+            return result;
+        }
 
-        //public CreateToDoList ViewOneList(Guid id)
-        //{
-        //    ListDictionary.id["ListId"] = id.ToString();
-        //    var list = _dbContext.ToDoLists.FirstOrDefault(x => x.Id == id);
-        //    return list;
-        //}
-
-        //public IEnumerable<CreateToDoList> GetCurrentUsersLists(System.Security.Principal.IIdentity identity, string userId)
-        //{
-        //    var lists = _dbContext.ToDoLists.Where(x => x.CreateUserId == Guid.Parse(userId)).ToList();
-        //    return lists;
-        //}
-
-        //public IEnumerable<CreateToDoList> SortLists(Sort option, string userId)
-        //{
-        //    var lists = _dbContext.ToDoLists.Where(x => x.CreateUserId == Guid.Parse(userId)).ToList().OrderBy(x => x.Date);  
-        //    //if (option == Sort.Name) // Funkar, men toList?
-        //    //{
-        //    //    lists = _dbContext.ToDoLists.Where(x => x.CreateUserId == Guid.Parse(userId)).OrderBy(x => x.ListTitle);
-        //    //}
-        //    //if (option == Sort.Descending) 
-        //    //{
-        //    //    lists = _dbContext.ToDoLists.Where(x => x.CreateUserId == Guid.Parse(userId)).OrderBy(x => x.Date);
-        //    //}  
-        //    //if (option == Sort.Ascending)
-        //    //{
-        //    //    lists = _dbContext.ToDoLists.Where(x => x.CreateUserId == Guid.Parse(userId)).OrderByDescending(x => x.Date);
-        //    //}
-        //    _dbContext.SaveChanges();
-        //    return lists;
-        //}
-
-
-        //public CreateToDoList WeeklyList(Guid? id)
-        //{
-        //    if(id == null)
-        //    {
-        //        id = Guid.Parse(ListDictionary.id["ListId"]);
-        //    }
-        //    var list = _dbContext.ToDoLists.FirstOrDefault(x => x.Id == id);
-        //    list.ThisWeek = true;
-        //    _dbContext.SaveChanges();
-        //    return list;
-        //}
+            //public CreateToDoList WeeklyList(Guid? id)
+            //{
+            //    if(id == null)
+            //    {
+            //        id = Guid.Parse(ListDictionary.id["ListId"]);
+            //    }
+            //    var list = _dbContext.ToDoLists.FirstOrDefault(x => x.Id == id);
+            //    list.ThisWeek = true;
+            //    _dbContext.SaveChanges();
+            //    return list;
+            //}
 
 
 

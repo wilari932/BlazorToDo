@@ -1,0 +1,28 @@
+﻿@page "/AllUsers"
+@using Services;
+@using Data;
+@inject UserHandler userhandler;
+
+<h3>AllUsers</h3>
+
+<div class="sjdjd">
+    @foreach (var user in users)
+    {
+        @user.UserName
+        
+    }
+</div>
+
+
+@code 
+{
+
+    private IEnumerable<CreateUser> users = new List<CreateUser>();
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+            users = await userhandler.GetAllUsersAsync();
+    }
+
+
+}

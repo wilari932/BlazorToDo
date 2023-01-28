@@ -1,25 +1,25 @@
 ﻿@page "/CreateNewToDoList";
 @using Services;
+@using Data;
+@inject ListHandler listhandler;
 
 
-<h3 style="text-blue">Create new list</h3>
 
-@*<EditForm>
+<h3 style="text-blue">Skapa ny lista</h3><br />
+<EditForm Model="@newList">
+    <InputText id="name" @bind-Value="newList.ListTitle" /> <br /> 
+</EditForm>
 
-</EditForm>*@
+<button @onclick="HandleSubmit">Save</button>
+
 
 @code {
 
-    //private HttpContent listItem;
-    
-    //public CreateNewToDoList(HttpContent listItem)
-    //{
-    //    this.listItem = listItem;
-    //}
+    public CreateToDoList newList = new CreateToDoList();
 
-    //public async Task OnSubmit()
-    //{
+    public async System.Threading.Tasks.Task HandleSubmit()
+    {
 
-    //    await ListHandler.CreateNewToDoList(listItem);
-    //}
+        newList = await listhandler.CreateNewToDoList(newList);
+    }
 }

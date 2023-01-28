@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/obj/Debug/net6.0/80aa1f97-be39-4e1f-9c7d-1c5a16d7978c_BlazorAppz.pdb
